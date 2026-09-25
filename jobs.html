@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Browse Jobs — Nexora IT Staffing &amp; Recruitment</title>
+  <meta name="description" content="Browse open IT jobs — search and filter engineering, data, cloud and leadership roles by location, technology, experience and salary.">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div id="header"></div>
+  <div id="navbar"></div>
+
+  <!-- ========================= PAGE HERO ========================= -->
+  <section class="page-hero">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Jobs</li>
+        </ol>
+      </nav>
+      <h1 class="mt-3">Find Your Next <span class="text-grad">Opportunity</span></h1>
+      <p class="lead">Search hundreds of hand-picked technology roles across the globe.</p>
+    </div>
+  </section>
+
+  <!-- ========================= FILTERS ========================= -->
+  <section class="section-sm">
+    <div class="container">
+      <div class="filter-bar">
+        <div class="row g-3">
+          <div class="col-lg-4">
+            <label class="form-label" for="filterSearch">Search</label>
+            <input type="text" id="filterSearch" class="form-control" placeholder="Job title, company or skill…">
+          </div>
+          <div class="col-md-6 col-lg-2">
+            <label class="form-label" for="filterLocation">Location</label>
+            <select id="filterLocation" class="form-select">
+              <option value="all">All locations</option>
+              <option value="remote-us">Remote (US)</option>
+              <option value="austin">Austin, TX</option>
+              <option value="new-york">New York, NY</option>
+              <option value="london">London, UK</option>
+              <option value="bangalore">Bangalore, IN</option>
+              <option value="berlin">Berlin, DE</option>
+              <option value="toronto">Toronto, CA</option>
+            </select>
+          </div>
+          <div class="col-md-6 col-lg-2">
+            <label class="form-label" for="filterTech">Technology</label>
+            <select id="filterTech" class="form-select">
+              <option value="all">All technologies</option>
+              <option value="dotnet">.NET</option>
+              <option value="java">Java</option>
+              <option value="react">React</option>
+              <option value="angular">Angular</option>
+              <option value="nodejs">Node.js</option>
+              <option value="python">Python</option>
+              <option value="aws">AWS</option>
+              <option value="azure">Azure</option>
+              <option value="devops">DevOps</option>
+              <option value="qa">QA</option>
+            </select>
+          </div>
+          <div class="col-md-6 col-lg-2">
+            <label class="form-label" for="filterExperience">Experience</label>
+            <select id="filterExperience" class="form-select">
+              <option value="all">All levels</option>
+              <option value="entry">Entry</option>
+              <option value="mid">Mid-level</option>
+              <option value="senior">Senior</option>
+              <option value="lead">Lead</option>
+              <option value="executive">Executive</option>
+            </select>
+          </div>
+          <div class="col-md-6 col-lg-2">
+            <label class="form-label" for="filterType">Job type</label>
+            <select id="filterType" class="form-select">
+              <option value="all">All types</option>
+              <option value="fulltime">Full-time</option>
+              <option value="contract">Contract</option>
+              <option value="parttime">Part-time</option>
+              <option value="internship">Internship</option>
+            </select>
+          </div>
+          <div class="col-md-6 col-lg-2">
+            <label class="form-label" for="filterSalary">Salary</label>
+            <select id="filterSalary" class="form-select">
+              <option value="all">Any salary</option>
+              <option value="low">Under $80k</option>
+              <option value="mid">$80k – $120k</option>
+              <option value="high">$120k+</option>
+            </select>
+          </div>
+          <div class="col-12 d-flex justify-content-between align-items-center">
+            <p class="mb-0 text-muted">Showing <span id="resultCount" class="text-white fw-bold">0</span> roles</p>
+            <button id="resetFilters" class="btn btn-outline-light btn-sm">Reset Filters</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================= JOB LIST ========================= -->
+  <section class="section-sm pb-5">
+    <div class="container">
+      <div class="row g-4" id="jobGrid">
+
+        <!-- Job 1 -->
+        <div class="col-md-6 col-lg-4 job-item" data-search="senior full-stack engineer react nodejs aws cloudforge" data-location="remote-us" data-tech="react" data-experience="senior" data-type="fulltime" data-salary="high">
+          <div class="card-job">
+            <div class="job-top">
+              <div>
+                <h3 class="job-title">Senior Full-Stack Engineer</h3>
+                <span class="job-company">CloudForge</span>
+              </div>
+              <span class="job-type-badge">Full-time</span>
+            </div>
+            <div class="job-meta">
+              <span><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> Remote (US)</span>
+              <span><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg> 5+ yrs</span>
+            </div>
+            <div class="job-skills"><span class="skill-tag">React</span><span class="skill-tag">Node.js</span><span class="skill-tag">AWS</span></div>
+            <div class="card-foot"><span class="job-salary">$140k – $170k</span><a href="job-details.html" class="btn btn-primary btn-sm">Apply</a></div>
+          </div>
+        </div>
+
+        <!-- Job 2 -->
+        <div class="col-md-6 col-lg-4 job-item" data-search="devops engineer kubernetes terraform azure hyperstack" data-location="austin" data-tech="devops" data-experience="mid" data-type="contract" data-salary="high">
+          <div class="card-job">
+            <div class="job-top">
+              <div>
+                <h3 class="job-title">DevOps Engineer</h3>
+                <span class="job-company">HyperStack</span>
+              </div>
+              <span class="job-type-badge">Contract</span>
+            </div>
+            <div class="job-meta">
+              <span><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> Austin, TX</span>
+              <span><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg> 3+ yrs</span>
+            </div>
+            <div class="job-skills"><span class="skill-tag">Kubernetes</span><span class="skill-tag">Terraform</span><span class="skill-tag">Azure</span></div>
+            <div class="card-foot"><span class="job-salary">$90 / hr</span><a href="job-details.html" class="btn btn-primary btn-sm">Apply</a></div>
+          </div>
+        </div>
+
+        <!-- Job 3 -->
+        <div class="col-md-6 col-lg-4 job-item" data-search="data engineer python spark sql datavault" data-location="new-york" data-tech="python" data-experience="mid" data-type="fulltime" data-salary="high">
+          <div class="card-job">
+            <div class="job-top">
+              <div>
+                <h3 class="job-title">Data Engineer (Python)</h3>
+                <span class="job-company">DataVault</span>
+              </div>
+              <span class="job-type-badge">Full-time</span>
+            </div>
+            <div class="job-meta">
+              <span><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> New York, NY</span>
+              <span><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg> 4+ yrs</span>
+            </div>
+            <div class="job-skills"><span class="skill-tag">Python</span><span class="skill-tag">Spark</span><span class="skill-tag">SQL</span></div>
+            <div class="card-foot"><span class="job-salary">$135k – $160k</span><a href="job-details.html" class="btn btn-primary btn-sm">Apply</a></div>
+          </div>
+        </div>
+
+        <!-- Job 4 -->
+        <div class="col-md-6 col-lg-4 job-item" data-search="frontend developer angular typescript quantum9" data-location="london" data-tech="angular" data-experience="mid" data-type="fulltime" data-salary="mid">
+          <div class="card-job">
+            <div class="job-top">
+              <div>
+                <h3 class="job-title">Frontend Developer (Angular)</h3>
+                <span class="job-company">Quantum9</span>
+              </div>
+              <span class="job-type-badge">Full-time</span>
+            </div>
+            <div class="job-meta">
+              <span><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> London, UK</span>
+              <span><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg> 3+ yrs</span>
+            </div>
+            <div class="job-skills"><span class="skill-tag">Angular</span><span class="skill-tag">TypeScript</span><span class="skill-tag">RxJS</span></div>
+            <div class="card-foot"><span class="job-salary">£60k – £80k</span><a href="job-details.html" class="btn btn-primary btn-sm">Apply</a></div>
+          </div>
+        </div>
+
+        <!-- Job 5 -->
+        <div class="col-md-6 col-lg-4 job-item" data-search="backend developer java spring nexus" data-location="bangalore" data-tech="java" data-experience="senior" data-type="fulltime" data-salary="mid">
+          <div class="card-job">
+            <div class="job-top">
+              <div>
+                <h3 class="job-title">Senior Java Backend Developer</h3>
+                <span class="job-company">Nexalyte</span>
+              </div>
+              <span class="job-type-badge">Full-time</span>
+            </div>
+            <div class="job-meta">
+              <span><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> Bangalore, IN</span>
+              <span><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg> 5+ yrs</span>
+            </div>
+            <div class="job-skills"><span class="skill-tag">Java</span><span class="skill-tag">Spring Boot</span><span class="skill-tag">Microservices</span></div>
+            <div class="card-foot"><span class="job-salary">₹35L – ₹50L</span><a href="job-details.html" class="btn btn-primary btn-sm">Apply</a></div>
+          </div>
+        </div>
+
+        <!-- Job 6 -->
+        <div class="col-md-6 col-lg-4 job-item" data-search="cloud engineer aws pixelworks" data-location="remote-us" data-tech="aws" data-experience="senior" data-type="contract" data-salary="high">
+          <div class="card-job">
+            <div class="job-top">
+              <div>
+                <h3 class="job-title">Cloud Engineer (AWS)</h3>
+                <span class="job-company">PixelWorks</span>
+              </div>
+              <span class="job-type-badge">Contract</span>
+            </div>
+            <div class="job-meta">
+              <span><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> Remote (US)</span>
+              <span><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg> 6+ yrs</span>
+            </div>
+            <div class="job-skills"><span class="skill-tag">AWS</span><span class="skill-tag">CloudFormation</span><span class="skill-tag">Linux</span></div>
+            <div class="card-foot"><span class="job-salary">$85 / hr</span><a href="job-details.html" class="btn btn-primary btn-sm">Apply</a></div>
+          </div>
+        </div>
+
+        <!-- Job 7 -->
+        <div class="col-md-6 col-lg-4 job-item" data-search="qa automation engineer selenium aurorasys" data-location="berlin" data-tech="qa" data-experience="mid" data-type="fulltime" data-salary="mid">
+          <div class="card-job">
+            <div class="job-top">
+              <div>
+                <h3 class="job-title">QA Automation Engineer</h3>
+                <span class="job-company">AuroraSys</span>
+              </div>
+              <span class="job-type-badge">Full-time</span>
+            </div>
+            <div class="job-meta">
+              <span><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> Berlin, DE</span>
+              <span><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg> 3+ yrs</span>
+            </div>
+            <div class="job-skills"><span class="skill-tag">Selenium</span><span class="skill-tag">Cypress</span><span class="skill-tag">CI/CD</span></div>
+            <div class="card-foot"><span class="job-salary">€65k – €85k</span><a href="job-details.html" class="btn btn-primary btn-sm">Apply</a></div>
+          </div>
+        </div>
+
+        <!-- Job 8 -->
+        <div class="col-md-6 col-lg-4 job-item" data-search="dotnet developer c# azure cloudforge" data-location="toronto" data-tech="dotnet" data-experience="mid" data-type="fulltime" data-salary="mid">
+          <div class="card-job">
+            <div class="job-top">
+              <div>
+                <h3 class="job-title">.NET Developer (C#)</h3>
+                <span class="job-company">CloudForge</span>
+              </div>
+              <span class="job-type-badge">Full-time</span>
+            </div>
+            <div class="job-meta">
+              <span><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> Toronto, CA</span>
+              <span><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg> 4+ yrs</span>
+            </div>
+            <div class="job-skills"><span class="skill-tag">C#</span><span class="skill-tag">.NET Core</span><span class="skill-tag">Azure</span></div>
+            <div class="card-foot"><span class="job-salary">CAD 100k – 130k</span><a href="job-details.html" class="btn btn-primary btn-sm">Apply</a></div>
+          </div>
+        </div>
+
+        <!-- Job 9 -->
+        <div class="col-md-6 col-lg-4 job-item" data-search="junior react developer internship hyperstack" data-location="austin" data-tech="react" data-experience="entry" data-type="internship" data-salary="low">
+          <div class="card-job">
+            <div class="job-top">
+              <div>
+                <h3 class="job-title">React Developer Intern</h3>
+                <span class="job-company">HyperStack</span>
+              </div>
+              <span class="job-type-badge">Internship</span>
+            </div>
+            <div class="job-meta">
+              <span><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> Austin, TX</span>
+              <span><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg> 0–1 yrs</span>
+            </div>
+            <div class="job-skills"><span class="skill-tag">React</span><span class="skill-tag">JavaScript</span><span class="skill-tag">CSS</span></div>
+            <div class="card-foot"><span class="job-salary">$45k – $60k</span><a href="job-details.html" class="btn btn-primary btn-sm">Apply</a></div>
+          </div>
+        </div>
+
+        <!-- Job 10 -->
+        <div class="col-md-6 col-lg-4 job-item" data-search="cto chief technology officer executive nexalyte" data-location="new-york" data-tech="java" data-experience="executive" data-type="fulltime" data-salary="high">
+          <div class="card-job">
+            <div class="job-top">
+              <div>
+                <h3 class="job-title">Chief Technology Officer</h3>
+                <span class="job-company">Nexalyte</span>
+              </div>
+              <span class="job-type-badge">Full-time</span>
+            </div>
+            <div class="job-meta">
+              <span><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> New York, NY</span>
+              <span><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg> 12+ yrs</span>
+            </div>
+            <div class="job-skills"><span class="skill-tag">Leadership</span><span class="skill-tag">Strategy</span><span class="skill-tag">Architecture</span></div>
+            <div class="card-foot"><span class="job-salary">$280k – $350k</span><a href="job-details.html" class="btn btn-primary btn-sm">Apply</a></div>
+          </div>
+        </div>
+
+        <!-- Job 11 -->
+        <div class="col-md-6 col-lg-4 job-item" data-search="nodejs backend developer datavault" data-location="remote-us" data-tech="nodejs" data-experience="senior" data-type="fulltime" data-salary="high">
+          <div class="card-job">
+            <div class="job-top">
+              <div>
+                <h3 class="job-title">Backend Engineer (Node.js)</h3>
+                <span class="job-company">DataVault</span>
+              </div>
+              <span class="job-type-badge">Full-time</span>
+            </div>
+            <div class="job-meta">
+              <span><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> Remote (US)</span>
+              <span><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg> 5+ yrs</span>
+            </div>
+            <div class="job-skills"><span class="skill-tag">Node.js</span><span class="skill-tag">PostgreSQL</span><span class="skill-tag">Docker</span></div>
+            <div class="card-foot"><span class="job-salary">$130k – $160k</span><a href="job-details.html" class="btn btn-primary btn-sm">Apply</a></div>
+          </div>
+        </div>
+
+        <!-- Job 12 -->
+        <div class="col-md-6 col-lg-4 job-item" data-search="azure cloud architect quantum9" data-location="london" data-tech="azure" data-experience="lead" data-type="fulltime" data-salary="high">
+          <div class="card-job">
+            <div class="job-top">
+              <div>
+                <h3 class="job-title">Azure Solutions Architect</h3>
+                <span class="job-company">Quantum9</span>
+              </div>
+              <span class="job-type-badge">Full-time</span>
+            </div>
+            <div class="job-meta">
+              <span><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> London, UK</span>
+              <span><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg> 8+ yrs</span>
+            </div>
+            <div class="job-skills"><span class="skill-tag">Azure</span><span class="skill-tag">Architecture</span><span class="skill-tag">Migration</span></div>
+            <div class="card-foot"><span class="job-salary">£95k – £120k</span><a href="job-details.html" class="btn btn-primary btn-sm">Apply</a></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- No results -->
+      <div id="noResults" class="text-center py-5" style="display:none;">
+        <div class="icon-badge mx-auto mb-3" style="width:64px;height:64px;"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></div>
+        <h3 class="mb-2">No matching roles found</h3>
+        <p class="text-muted mb-4">Try adjusting your search or resetting the filters.</p>
+        <button class="btn btn-primary" onclick="document.getElementById('resetFilters').click()">Reset Filters</button>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer"></div>
+
+  <script src="assets/jquery/jquery.min.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
