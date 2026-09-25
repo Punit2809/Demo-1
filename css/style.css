@@ -912,3 +912,8 @@ img { max-width: 100%; }
   .glass-card { display: none; }
   .footer-legal { flex-wrap: wrap; gap: 14px; }
 }
+#navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1050;
+}
